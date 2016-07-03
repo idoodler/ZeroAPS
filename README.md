@@ -97,6 +97,19 @@ You won't get a finished product that you can clip on like your insulin pump. It
 
 **Congratulations, your ZeroAPS is ready to use now** 🎉
 
+# Thats how my closed loop is looking right now
+*I will update this when I make any changes*
+***
+![ZeroAPS from the top compared to a Medtronic MiniMed Paradigm 754](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_top.JPG)
+*ZeroAPS from the top compared to a Paradigm 754*
+![ZeroAPS from the side compared to a Medtronic MiniMed Paradigm 754](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_side.JPG)
+*ZeroAPS from the side compared to a Paradigm 754*
+
+# Nice to know
+The current power consumption is about **140mA** *(If you disabled the ACK LED and the HDMI)*
+<br>
+With a 4400mAh battery we should have a battery live of about **31 hours** which is not bad 😊
+
 # Common issues you might run into
 * Faulty solder connections
   * Check your solder connections with a multimeter
