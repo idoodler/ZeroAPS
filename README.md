@@ -85,7 +85,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
       * Edit `rc.local` by executing `sudo nano /etc/rc.local` in your Raspberry Pis command line
       * Add `su pi -c '/home/pi/mmeowlink-source/bin/mmtune.py --port /dev/ttyAMA0 --radio_local WW --serial <PUMP_SERIAL_NUMBER> < /dev/null &'` before `exit 0`
       <br>
-      *WW means **W**orld **W**ide*
+      *WW means World Wide*
 4. *[Optional]* Increase the range with an antenna
   * With the SRF module we already have a greater range then with the CareLink USB stick, but we can tweak it a bit by soldering an approximately 8cm (3,14 inch) wire to the SRF module. With this you can even penetrate a wall 😊
 5. Now check if everything works
