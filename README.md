@@ -6,7 +6,7 @@ Use a Raspberry Pi Zero an a few other products to build your compact close loop
 * 1x Raspberry Pi Zero *(Get a starter pack [here](https://www.adafruit.com/products/2817))*
   * 1x Micro SD Card 8GB
   * [Some way to connect your Raspberry Pi Zero to the internet]
-    * *I used an Raspberry Pi 2 I had laying around (I basically set up Raspbian and downloaded everything following on the Raspberry Pi 2 and then transfair the micro SD card to the Raspberry Pi Zero*
+    * *I used an Raspberry Pi 2 I had laying around (I basically set up Raspbian and downloaded everything following on the Raspberry Pi 2/3 and then swap the micro SD card to the Raspberry Pi Zero*
     * *You also can use a WiFi USB dongle*
   * [1x Micro HDMI to HDMI adapter]
   * [1x USB OTG to USB adapter]
@@ -36,7 +36,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
 3. Prepare your radio module
   * Follow [this tutorial](https://github.com/oskarpearson/mmeowlink/wiki/Pi-With-Slice-of-Radio) to flash the radio module, below you will find the color codes matching the colors used in the tutorial ![SRF Footprint](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/srf%20footprint%20flash.png?token=AGgkwdv6VsdTywUvk8v7RYhet1swmNqRks5XgXlbwA%3D%3D)
   <br>
-  *This shematic is from [openmicros.org](http://openmicros.org/index.php/articles/88-ciseco-product-documentation/259-srf-technical-data)*
+  *This schematic is from [openmicros.org](http://openmicros.org/index.php/articles/88-ciseco-product-documentation/259-srf-technical-data)*
 4. Setup [MMowlink](https://github.com/oskarpearson/mmeowlink/wiki/Installing-MMeowlink) (used to allow OpenAPS communicate with the radio module) if you have not already
 
 **Now swap your micro SD card in your Raspberry Pi Zero if you have not already**
@@ -58,7 +58,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
 # Start with the hardware part
 *This may be a bit tricky if this is your first solder job, take your time and don't be frustrated if it is not working the first time.*
 <br>
-*I am using an enabelled copper wire, so everything looks cleaner, but you can use normal wires to.*
+*I am using an enamelled copper wire, so everything looks cleaner, but you can use normal wires to.*
 
 
 1. We want to power the Raspberry Pi Zero
@@ -78,7 +78,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
       * **Disconnect the power again!**
 2. We want to communicate with the insulin pump
   * Her we first solder every wire to the SRF board, then glue it down and then solder the wires to the Raspberry Pi Zero
-    * So, solder the wires according to the color codes in the picture below ![ZeroAPS SRF soldering](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_SRF.JPG?token=AGgkwcoPfytf55tKqtT5DG5Ivy0A140yks5XgkOTwA%3D%3D)
+    * Solder the wires according to the color in the picture below ![ZeroAPS SRF soldering](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_SRF.JPG?token=AGgkwcoPfytf55tKqtT5DG5Ivy0A140yks5XgkOTwA%3D%3D)
 3. Choose the right frequency
   * By default the MMowlink will use the US frequency which is awesome if you live in the US and have an US pump, but for us non US citizens we need to do an additional step
     * Everytime the Raspberry Pi Zero boots we need to execute a little command to tune it for the **W**orld **W**ide frequency band
@@ -91,7 +91,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
 5. Now check if everything works
   * The best way to check if everything works is to communicate with the pump
   <br>
-  Do this by `cd` in your `openaps` directory on your Raspberry Pi Zero, then you can execute `openaps use <YOUR_PUMP> status` to get the current status of your pump. If you get a response that is formated like a JSON everything you have done was right!
+  Do this by `cd` in your `openaps` directory on your Raspberry Pi Zero, then you can execute `openaps use <YOUR_PUMP> status` to get the current status of your pump. If you get a response that is formatted like a JSON everything you have done was right!
   <br>
   If something is not working you need to find the issue
 
