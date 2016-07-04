@@ -72,7 +72,7 @@ You won't get a finished product that you can clip on like your insulin pump. It
 1. We want to power the Raspberry Pi Zero
   * We can glue the PowerBoost PCB on the back of the Raspberry Pi Zero like this ![ZeroAPS with PowerBoost](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_PowerBoost.JPG?token=AGgkwbFqGLHR1bWtn097CHdSHzGGV0w6ks5XgkLxwA%3D%3D)
     *As a pro tip I also desoldered the PWR LED of the PowerBoost PCB (lower right side on the board), so can sleep better and won't get blind when looking at it.*
-    
+
     **I am using a very strong double sided foam tape, be careful when placing it on the Raspberry Pi Zero, it is very hard to remove!**
   * Next we need to solder the power wires from the PowerBoost to the Raspberry Pi Zero
     * **5V**: Solder a wire from the PowerBoosts 5V output *(on the lower side of the board)* to the Raspberry Pi Zeros 5V GPIO **pin 2**
@@ -108,7 +108,21 @@ You won't get a finished product that you can clip on like your insulin pump. It
 
 **Congratulations, your ZeroAPS is ready to use now** 🎉
 
-# Thats how my closed loop is looking right now
+# Make it more compact
+Please be careful and don't destroy your Raspberry Pi Zero!
+***
+
+You can desolder the HDMI port and both micro USB ports of the Raspberry Pi. This makes it really flat. To compensate the lost USB OTG and power port you can glue an micro USB breakout board to a spare place on the other side of the Raspberry Pi Zero
+
+1. Desolder the USB ports
+  * Get power
+    * Solder  **GND** to **GND** of the PowerBoost
+    * Solder **VCC (or 5V)** to **Bat** of the PowerBoost
+  * Get data *(We directly solder to the gold pads on the Raspberry Pi)*
+    * Solder **D+** to **PP22**
+    * Solder **D-** to **PP23**
+
+# Thats how my APS is looking right now
 *I will update this when I make any changes*
 ***
 ![ZeroAPS from the top compared to a Medtronic MiniMed Paradigm 754](https://raw.githubusercontent.com/idoodler/ZeroAPS/master/ZeroAPS_top.JPG)
