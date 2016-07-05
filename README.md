@@ -1,6 +1,8 @@
 # ZeroAPS
 Use a Raspberry Pi Zero and a few other components to build your compact close loop with [OpenAPS](https://openaps.org)
 
+*I am also working on an ultra compact [Intel Edison](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html) version*
+
 ## What you will need
 *(Everything in [ ] is only used for the initial setup)*
 * 1x **Raspberry Pi Zero** *(Get a starter pack [here](https://www.adafruit.com/products/2817))*
@@ -48,6 +50,8 @@ You won't get a finished product that you can clip on like your insulin pump. It
 **Now swap your micro SD card in your Raspberry Pi Zero if you have not already**
 
 * If you want to access your Raspberry Pi Zero via USB there is an option for that 😊
+<br>
+**(This only works if you don't need the USB OTG port!)**
   * The Raspberry Pi Zero is capable of emulating USB devices with the USB OTG port, so we can simulate an Ethernet adapter. If you connect your Raspberry Pi Zero with your PC the Raspberry will create its own network. This allows you to directly SSH into your Raspberry Pi Zero. Please keep in mind, that if you enable this you won't be able to use a USB device on your Raspberry Pi Zero anymore.
 * If you want to extend the battery live of your close loop you can disable the HDMI components and the ACT LED
   * Disable HDMI **(Keep in mind that you won't get any output on the HDMI port if you do this)**
@@ -112,15 +116,22 @@ You won't get a finished product that you can clip on like your insulin pump. It
 Please be careful and don't destroy your Raspberry Pi Zero!
 ***
 
+This is more of a bloody hack, but it will make it more compact. My goal is to have only one USB port on the Raspberry Pi, but the PowerBoost won't let us access the data pins of the micro USB, so we will use 2 micro USB ports for now. *(I already contacted [Adafruit](https://www.adafruit.com) because of that feature)*
+
 You can desolder the HDMI port and both micro USB ports of the Raspberry Pi. This makes it really flat. To compensate the lost USB OTG and power port you can glue an micro USB breakout board to a spare place on the other side of the Raspberry Pi Zero
 
 1. Desolder the USB ports
+<br>
+**(First make sure you don't need them in the future, e.g for Dexcom receiver)**
   * Get power
     * Solder  **GND** to **GND** of the PowerBoost
     * Solder **VCC (or 5V)** to **Bat** of the PowerBoost
-  * Get data *(We directly solder to the gold pads on the Raspberry Pi)*
+  * Get data *(Directly solder to the gold pads on the Raspberry Pi)*
     * Solder **D+** to **PP22**
     * Solder **D-** to **PP23**
+
+1. Desolder the HDMI port
+  * Yep, thats all 😊
 
 # Thats how my APS is looking right now
 *I will update this when I make any changes*
@@ -149,7 +160,7 @@ With a 4400mAh battery we should have a battery live of about **31 hours** which
 * The Raspberry Pi Zero can't be powered by the PowerBoost, but everything works when connecting the Pi directly to a USB port
   * Check if the PowerBoost is working correctly
     * Measure the voltage on the **GND** and **5V** pins we soldered to *(Battery or USB needs to be plugged in to the PowerBoost of course 😊)*
-    * Measure the voltage of the battery by connecting the multimeter leads to the **Bat** and **GND** hole. The voltage should be between 4.1V (MAX) to 3.2V (Min, the red **LOW** LED will light up)
+    * Measure the voltage of the battery by connecting the multimeter leads to the **Bat** and **GND** hole. The voltage should be between 4.1V (Max) to 3.2V (Min, the red **LOW** LED will light up)
     * Check if the **PWR** LED is on. If you desoldered it, like I did, you can check the voltage. There should be around 5V.
 * OpenAPS does work with the SRF module
   * Repeat part 4 of "Lets start with the software"
