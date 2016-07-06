@@ -18,6 +18,8 @@ Use a Raspberry Pi Zero and a few other components to build your compact close l
 * 1x [**Power management aka PowerBoost**](https://www.adafruit.com/products/2465) (Power supply + Battery charger)
 * 1x [**Battery**](https://www.adafruit.com/products/354)
 * 1x [**Radio Module**](https://www.wirelessthings.net/srf-wireless-rf-radio-surface-mount)
+<br>
+*Why I am using the SRF module instead of the SliceOfRadio? Because it basically is just a breakout board of the SRF module and we can do it ourself:)*
   * 1x [**CC-Debugger**](http://www.aliexpress.com/item/CC-Debugger-CCxxxx-Bluetooth-ZIGBEE-Wireless-Emulator-Programmer-for-RF-System-on-Chips/32417465960.html?spm=2114.13010608.0.55.1gfz18) to flash the chip with a custom software
 * Some soldering skills + soldering equipment
 * A steady hand
