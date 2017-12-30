@@ -1,7 +1,15 @@
 # ZeroAPS
 Use a Raspberry Pi Zero and a few other components to build your compact close loop with [OpenAPS](https://openaps.org)
 
-*I am also working on an ultra compact [Intel Edison](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html) version*
+~~*I am also working on an ultra compact [Intel Edison](http://www.intel.com/content/www/us/en/do-it-yourself/edison.html) version*~~
+
+**I found an already working solution working with the Intel Edison, please use a [900MHz Explorer Board for Edison](https://groupgets.com/campaigns/273-900mhz-explorer-board-for-edison) and refere to [this guide](http://openaps.readthedocs.io/en/latest/docs/Gear%20Up/edison.html).**
+
+---
+# Deprecated
+**Due to the closing of *WirelessThings* the RF module is not abailable anymore :(**
+
+---
 
 ## What you will need
 *(Everything in [ ] is only used for the initial setup)*
